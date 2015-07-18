@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    {{#if production}}
+      {{> tags }} {{! Google Tags. See https://www.google.com/tagmanager/}}
+    {{/if}}
+
+    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content mdl-main">
+        {{ body}}
+
+        {{> footer }}
+      </main>
+      <div class="mdl-layout__obfuscator"></div>
+    </div>
+
+    <!-- JS and analytics only. -->
+    {{> javascripts }}
+  </body>
+</html>
