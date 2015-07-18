@@ -1,18 +1,40 @@
-body {
+body:before {
   background-image: url('http://rocketleague.psyonix.com/wp-content/uploads/sites/2/2015/05/20141219_rocketleague_01.jpg');
   background-size: cover;
+  background-attachment: fixed;
+  content: '';
+  will-change: transform;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: fixed;
+  -webkit-filter: blur(2px);
+  transform: scale(1.05);
 }
 
 .mdl-main {
-  padding-top: 250px;
+  padding-top: 40vh;
+}
+
+.mdl-container {
+  max-width: 990px;
 }
 
 .mdl-card__media {
   padding: 10px 20px;
-  min-height: 300px;
+  min-height: 30vh;
   display: flex;
   flex-grow: 1;
   align-items: flex-end;
+  -webkit-filter: contrast(0.5);
+  // transform: scale(1.12);
+  transition: 0.5s;
+  &:hover{
+    // transform: scale(1.05);
+    -webkit-filter: contrast(0.7);
+  }
 }
 
 .pic-1{
@@ -22,4 +44,8 @@ body {
 }
 .pic-2 .mdl-card__media {
   background-image: url('http://rocketleague.psyonix.com/wp-content/uploads/sites/2/2014/10/20141023_rocketleague_01.jpg');
+}
+
+a {
+  text-decoration: none;
 }

@@ -119,6 +119,10 @@ module.exports = function(grunt) {
       site: {
         files: ['Gruntfile.js', '<%= less.options.paths %>/*.less', 'templates/**/*.hbs'],
         tasks: ['design']
+      },
+      less: {
+        files: ['<%= site.theme %>/site.less'],
+        tasks: ['less']
       }
     }
   });
